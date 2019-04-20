@@ -1,12 +1,16 @@
-import urllib.parse
+from urllib.parse import urljoin
 import requests
-import json
 
-url = 'https://notify.moe/api/animelist/4J6qpK1ve'
-#api_animelist = 'https:/notify.moe/api/animelist/'
-#input_id = input("ENTER YOU userId: \n")
-#id = input_Id
-#url = api_animelist + urllib.parse.urlencode('id')
+
+a = int(input("ENTER THE NUMBER OF YOUR ANIME: \n"))
+a +=1
+
+api_animelist = 'https://notify.moe/api/animelist/'
+
+input_Id = str(input("ENTER YOU userId: \n"))
+id = input_Id
+
+url = urljoin(api_animelist , id) 
 
 json_data = requests.get(url).json()
 #print(json_data)
@@ -14,6 +18,8 @@ json_data = requests.get(url).json()
 json_userId = json_data['userId']
 print(json_userId)
 
-json_Id = json_data['items'][0]['animeId']
-json_status = json_data['items'][0]['status']
-print(json_Id +" | "+ json_status)
+i=0
+for i in range(a):
+   json_Id = json_data['items'][i]['animeId']
+   json_status = json_data['items'][i]['status']
+   print(json_Id +" | "+ json_status)
