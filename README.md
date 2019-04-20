@@ -1,0 +1,1 @@
+# notify.moe-api-animelist-extractor
