@@ -1,1 +1,1 @@
-# using python web scrapes to users animelist api and returns animeId and status
+# Using python web scrapes to scrape users animelist/api and returns animeId and status
