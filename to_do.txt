@@ -1,4 +1,0 @@
-
-1. Extract userId from username
-
-2. Extract number of anime without requesting input from user
