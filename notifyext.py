@@ -5,7 +5,6 @@ import requests
 import notifyId
 import replace
 import converter
-#import builder
 
 username = str(input('Enter your notify.moe username:\n'))
 userId = (notifyId.notifyId(username))
@@ -111,6 +110,6 @@ while validity:
         ET.SubElement(anime, 'update_on_import').text = '0'
 
     tree = ET.ElementTree(myanimelist)
-    tree.write('test.xml')
+    tree.write('scrape_anilistanime.xml')
 
     break
