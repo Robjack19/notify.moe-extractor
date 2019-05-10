@@ -110,6 +110,6 @@ while validity:
         ET.SubElement(anime, 'update_on_import').text = '0'
 
     tree = ET.ElementTree(myanimelist)
-    tree.write('scrape_anilistanime.xml')
+    tree.write('convertedlistani.xml')
 
     break
