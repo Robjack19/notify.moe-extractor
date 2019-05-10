@@ -72,6 +72,8 @@ while validity:
     #print(astatus)
     #building .xml file
     print('Now Building: ')
+    convertedlistani = open('convertedlistani.xml','w')
+    convertedlistani.write('<?xml version="1.0" encoding="UTF-8" ?>')
 
     myanimelist = ET.Element('myanimelist')
     myinfo = ET.SubElement(myanimelist, 'myinfo')
@@ -111,5 +113,6 @@ while validity:
 
     tree = ET.ElementTree(myanimelist)
     tree.write('convertedlistani.xml')
+    convertedlistani.close()
 
     break
